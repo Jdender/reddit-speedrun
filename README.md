@@ -1,1 +1,1 @@
-# reddit-speedrun
+# Reddit Speedrun
