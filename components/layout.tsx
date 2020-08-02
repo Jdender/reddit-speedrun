@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 interface LayoutPropts {
     title: string;
@@ -12,7 +13,17 @@ const Layout: FC<LayoutPropts> = (props) => (
         </Head>
 
         <header>
-            <h1>Header</h1>
+            <Link href="/">
+                <a>
+                    <h1>Reddit Speedrun</h1>
+                </a>
+            </Link>
+
+            <Link href="/post/submit">
+                <a>
+                    <h3>Submit Post</h3>
+                </a>
+            </Link>
         </header>
         <main>{props.children}</main>
         <footer>
@@ -27,6 +38,11 @@ const Layout: FC<LayoutPropts> = (props) => (
 
                 display: grid;
                 grid-template-rows: auto 1fr auto;
+            }
+            header {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
             }
         `}</style>
 
